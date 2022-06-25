@@ -170,9 +170,11 @@ public class TicketServiceTest {
 	}
 
 	private TicketTypeRequest[] getTicketTypeRequestsCase2() {
-		TicketTypeRequest[] result = new TicketTypeRequest[] { new TicketTypeRequest(TicketTypeRequest.Type.ADULT, 2),
+		TicketTypeRequest[] result = new TicketTypeRequest[] { 
+				new TicketTypeRequest(TicketTypeRequest.Type.ADULT, 2),
 				new TicketTypeRequest(TicketTypeRequest.Type.CHILD, 3),
-				new TicketTypeRequest(TicketTypeRequest.Type.INFANT, 1) };
+				new TicketTypeRequest(TicketTypeRequest.Type.INFANT, 1) 
+		};
 		return result;
 	}
 
