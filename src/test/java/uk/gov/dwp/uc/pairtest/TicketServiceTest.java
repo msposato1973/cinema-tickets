@@ -197,9 +197,11 @@ public class TicketServiceTest {
 	}
 
 	private TicketTypeRequest[] getTicketTypeRequestsCase4() {
-		TicketTypeRequest[] result = new TicketTypeRequest[] { new TicketTypeRequest(TicketTypeRequest.Type.ADULT, 0),
+		TicketTypeRequest[] result = new TicketTypeRequest[] { 
+				new TicketTypeRequest(TicketTypeRequest.Type.ADULT, 0),
 				new TicketTypeRequest(TicketTypeRequest.Type.CHILD, 0),
-				new TicketTypeRequest(TicketTypeRequest.Type.INFANT, 0) };
+				new TicketTypeRequest(TicketTypeRequest.Type.INFANT, 0) 
+		};
 
 		return result;
 	}
@@ -217,16 +219,20 @@ public class TicketServiceTest {
 	}
 
 	private TicketTypeRequest[] getTicketTypeRequestsExceptionAdultMissing() {
-		TicketTypeRequest[] result = new TicketTypeRequest[] { new TicketTypeRequest(TicketTypeRequest.Type.CHILD, 3),
-				new TicketTypeRequest(TicketTypeRequest.Type.INFANT, 1) };
+		TicketTypeRequest[] result = new TicketTypeRequest[] { 
+				new TicketTypeRequest(TicketTypeRequest.Type.CHILD, 3),
+				new TicketTypeRequest(TicketTypeRequest.Type.INFANT, 1) 
+		};
 
 		return result;
 	}
 
 	private TicketTypeRequest[] getTicketTypeRequestsExceptionMaxTickets() {
-		TicketTypeRequest[] result = new TicketTypeRequest[] { new TicketTypeRequest(TicketTypeRequest.Type.ADULT, 10),
+		TicketTypeRequest[] result = new TicketTypeRequest[] { 
+				new TicketTypeRequest(TicketTypeRequest.Type.ADULT, 10),
 				new TicketTypeRequest(TicketTypeRequest.Type.CHILD, 10),
-				new TicketTypeRequest(TicketTypeRequest.Type.INFANT, 11) };
+				new TicketTypeRequest(TicketTypeRequest.Type.INFANT, 11) 
+		};
 
 		return result;
 	}
