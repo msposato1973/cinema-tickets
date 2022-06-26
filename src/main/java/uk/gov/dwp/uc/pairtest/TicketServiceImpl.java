@@ -26,7 +26,7 @@ public class TicketServiceImpl implements TicketService {
      * Should only have private methods other than the one below.
      */
     @Override
-    public void purchaseTickets(Long accountId, TicketTypeRequest... ticketTypeRequests)
+    public void purchaseTickets(Long accountId, final TicketTypeRequest... ticketTypeRequests)
             throws InvalidPurchaseException {
         totalAmountToPay = 0;
         totalSeatsToAllocate = 0;
