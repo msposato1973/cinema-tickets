@@ -39,8 +39,10 @@ public class TicketServiceImpl implements TicketService {
                 if ((totalTickets > 0) && (totalAdults == 0)) {
                     throw new InvalidPurchaseException(ErrorMessage.ADULT_MISSING.getMessage());
                 }
-                processTicketPayment(accountId);
-                processSeatReservation(accountId);
+                if (totalTickets > 0) {
+					processTicketPayment(accountId);
+					processSeatReservation(accountId);
+				}
             } else {
                 throw new InvalidPurchaseException(ErrorMessage.INVALID_ACCOUNT.getMessage());
             }
